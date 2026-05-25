@@ -1,0 +1,26 @@
+/* styles/colors.css */
+
+@theme {
+  /* ── Palette ── */
+  --color-green-primary: #2D7A5C;
+  --color-green-dark:    #1A4D35;
+  --color-gold:          #D4A574;
+  --color-gray-dark:     #1F2937;
+
+  /* ── Typographie ── */
+  --font-sans: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+
+  /* ── Animations ── */
+  --animate-fade-in:  fadeIn  0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
