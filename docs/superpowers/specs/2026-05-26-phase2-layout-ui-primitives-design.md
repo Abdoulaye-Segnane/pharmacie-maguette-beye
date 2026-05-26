@@ -46,9 +46,10 @@ components/
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
-  asChild?: boolean;
 }
 ```
+
+**Composition avec liens :** Pas de `asChild`. Pour un bouton-lien : `<Link href="..."><Button>texte</Button></Link>`. Button ne rend que `<button>` — simplicité avant tout.
 
 **Variants :**
 - `primary` — `bg-green-primary text-white hover:bg-green-dark`
@@ -62,7 +63,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 **Commun :** `rounded-lg font-semibold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-primary`
 
-**`asChild` :** Quand `true`, rend un `<span>` wrappé pour permettre l'usage avec `<a>` via composition. Le parent passe ses classes au child.
+**Accessibilité :** `focus-visible:ring-2 focus-visible:ring-green-primary`, `disabled:opacity-50 disabled:cursor-not-allowed`.
 
 ---
 
