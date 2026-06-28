@@ -45,3 +45,27 @@ export type ColorPalette = {
   readonly white: string;
   readonly grayDark: string;
 };
+
+export interface Testimonial {
+  id: string
+  name: string
+  role: string
+  rating: number
+  text: string
+}
+
+export interface Article {
+  id: string
+  title: string
+  excerpt: string
+  date: string
+  image: string
+  slug: string
+}
+
+export interface Feature {
+  id: string
+  title: string
+  description: string
+  icon: 'shield' | 'user' | 'heart' | 'map-pin'
+}

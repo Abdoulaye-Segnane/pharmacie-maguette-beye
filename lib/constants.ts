@@ -6,6 +6,7 @@ export const PHARMACY_BRAND_NAME = 'MAGUETTE BEYE' as const;
 export const PHARMACY_CITY    = 'Kaolack' as const;
 export const PHARMACY_COUNTRY = 'Sénégal' as const;
 export const SITE_URL         = 'https://pharmaciemaguettebeye.sn' as const;
+export const WHATSAPP_NUMBER  = '221770000000' as const;
 
 export const contact: ContactInfo = {
   phone:   '+221 33 941 00 00',
