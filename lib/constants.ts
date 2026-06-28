@@ -2,6 +2,7 @@
 import type { ContactInfo, NavItem } from './types';
 
 export const PHARMACY_NAME    = 'Pharmacie Maguette Beye' as const;
+export const PHARMACY_BRAND_NAME = 'MAGUETTE BEYE' as const;
 export const PHARMACY_CITY    = 'Kaolack' as const;
 export const PHARMACY_COUNTRY = 'Sénégal' as const;
 export const SITE_URL         = 'https://pharmaciemaguettebeye.sn' as const;

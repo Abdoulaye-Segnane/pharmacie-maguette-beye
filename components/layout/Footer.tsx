@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { contact, navLinks, PHARMACY_NAME } from '@/lib/constants'
+import { contact, navLinks, PHARMACY_NAME, PHARMACY_BRAND_NAME } from '@/lib/constants'
 import { formatHours, formatPhone } from '@/lib/utils'
 
 export default function Footer() {
@@ -15,7 +15,7 @@ export default function Footer() {
                 Pharmacie
               </span>
               <span className="text-green-primary text-xs font-medium tracking-widest block">
-                MAGUETTE BEYE
+                {PHARMACY_BRAND_NAME}
               </span>
             </div>
             <address className="not-italic text-sm text-white/80 space-y-1">
