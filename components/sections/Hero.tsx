@@ -1,16 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { contact } from '@/lib/constants'
+import { contact, HERO_IMAGE_URL } from '@/lib/constants'
+import { toTelUri } from '@/lib/utils'
 import AnimatedSection from '@/components/ui/AnimatedSection'
-
-const HERO_IMAGE =
-  'https://images.unsplash.com/photo-1576671081837-49000212a370?w=1920&q=80'
 
 export default function Hero() {
   return (
     <section className="relative flex min-h-[560px] items-center justify-center overflow-hidden h-[90vh]">
       <Image
-        src={HERO_IMAGE}
+        src={HERO_IMAGE_URL}
         alt="Pharmacie Maguette Beye — Kaolack, Sénégal"
         fill
         className="object-cover object-center"
@@ -47,7 +45,7 @@ export default function Hero() {
               Voir nos services
             </Link>
             <a
-              href={`tel:${contact.phone}`}
+              href={toTelUri(contact.phone)}
               className="inline-flex items-center rounded-lg border-2 border-white/80 px-7 py-3.5 text-base font-semibold text-white transition-colors duration-200 hover:border-white hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
               Nous appeler

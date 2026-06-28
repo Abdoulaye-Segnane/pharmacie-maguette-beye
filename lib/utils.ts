@@ -21,3 +21,17 @@ export function formatPhone(phone: string): string {
 export function formatHours(open: string, close: string): string {
   return `${open} – ${close}`;
 }
+
+/** Converts a phone string to a valid RFC 3966 tel: URI. */
+export function toTelUri(phone: string): string {
+  return 'tel:' + phone.replace(/[^\d+]/g, '')
+}
+
+/** Formats an ISO date string as a French locale date. */
+export function formatDate(dateStr: string): string {
+  return new Intl.DateTimeFormat('fr-FR', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  }).format(new Date(dateStr))
+}

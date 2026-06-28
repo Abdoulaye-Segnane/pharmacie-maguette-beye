@@ -4,16 +4,9 @@ import Card from '@/components/ui/Card'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import type { Article } from '@/lib/types'
 import articlesData from '@/data/articles.json'
+import { formatDate } from '@/lib/utils'
 
-const articles = articlesData as Article[]
-
-function formatDate(dateStr: string): string {
-  return new Intl.DateTimeFormat('fr-FR', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  }).format(new Date(dateStr))
-}
+const articles = articlesData satisfies Article[]
 
 export default function BlogPreview() {
   return (

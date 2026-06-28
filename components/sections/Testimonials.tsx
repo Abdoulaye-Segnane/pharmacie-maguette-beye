@@ -4,7 +4,7 @@ import type { Testimonial } from '@/lib/types'
 import testimonialsData from '@/data/testimonials.json'
 import type { ReactNode } from 'react'
 
-const testimonials = testimonialsData as Testimonial[]
+const testimonials = testimonialsData satisfies Testimonial[]
 
 function StarRating({ rating }: { rating: number }): ReactNode {
   return (

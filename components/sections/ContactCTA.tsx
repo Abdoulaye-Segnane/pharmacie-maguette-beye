@@ -1,5 +1,5 @@
 import { contact, PHARMACY_NAME, WHATSAPP_NUMBER } from '@/lib/constants'
-import { formatPhone } from '@/lib/utils'
+import { formatPhone, toTelUri } from '@/lib/utils'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 
 const WHATSAPP_MESSAGE = encodeURIComponent(
@@ -34,7 +34,7 @@ export default function ContactCTA() {
                   Téléphone
                 </h3>
                 <a
-                  href={`tel:${contact.phone}`}
+                  href={toTelUri(contact.phone)}
                   className="text-lg font-semibold text-white transition-colors hover:text-gold"
                 >
                   {formatPhone(contact.phone)}
@@ -55,7 +55,7 @@ export default function ContactCTA() {
 
               <div className="flex flex-col gap-3 pt-2 sm:flex-row">
                 <a
-                  href={`tel:${contact.phone}`}
+                  href={toTelUri(contact.phone)}
                   className="inline-flex items-center justify-center rounded-lg bg-green-primary px-6 py-3 font-semibold transition-colors hover:bg-green-primary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-primary"
                 >
                   Appeler maintenant
