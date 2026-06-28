@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { navLinks, contact, PHARMACY_BRAND_NAME } from '@/lib/constants'
 import { cn } from '@/lib/utils'
-import Button from '@/components/ui/Button'
 import MobileNav from '@/components/layout/MobileNav'
 
 export default function Header() {
@@ -42,13 +41,12 @@ export default function Header() {
           ))}
         </ul>
 
-        <div className="hidden md:block">
-          <a href={`tel:${contact.phone}`}>
-            <Button variant="outline" size="sm">
-              {contact.phone}
-            </Button>
-          </a>
-        </div>
+        <a
+          href={`tel:${contact.phone}`}
+          className="hidden md:inline-flex items-center rounded-lg font-semibold text-sm px-3 py-1.5 border-2 border-green-primary text-green-primary hover:bg-green-primary hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-primary"
+        >
+          {contact.phone}
+        </a>
 
         <button
           className="md:hidden p-2 text-green-dark hover:text-green-primary transition-colors"

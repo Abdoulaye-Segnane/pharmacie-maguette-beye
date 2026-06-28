@@ -24,12 +24,14 @@ const sizeClasses: Record<NonNullable<ButtonProps['size']>, string> = {
 export default function Button({
   variant = 'primary',
   size = 'md',
+  type = 'button',
   className,
   children,
   ...props
 }: ButtonProps) {
   return (
     <button
+      type={type}
       className={cn(
         'rounded-lg font-semibold transition-colors duration-200',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-primary',
