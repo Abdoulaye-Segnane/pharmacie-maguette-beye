@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "name": "Aminata Diallo",
+    "role": "Cliente fidèle",
+    "rating": 5,
+    "text": "Service impeccable ! Le pharmacien m'a conseillée avec beaucoup de patience. Les médicaments sont toujours disponibles et à bon prix."
+  },
+  {
+    "id": "2",
+    "name": "Moussa Ndiaye",
+    "role": "Client depuis 3 ans",
+    "rating": 5,
+    "text": "La meilleure pharmacie de Kaolack. Personnel chaleureux, conseils précis. Je recommande vivement à toute ma famille."
+  },
+  {
+    "id": "3",
+    "name": "Fatou Sarr",
+    "role": "Cliente",
+    "rating": 5,
+    "text": "Toujours disponibles même en fin de journée. Les produits sont authentiques et les prix raisonnables. Merci à toute l'équipe."
+  },
+  {
+    "id": "4",
+    "name": "Ibrahim Sow",
+    "role": "Client régulier",
+    "rating": 4,
+    "text": "Pharmacie sérieuse avec du personnel qualifié. Bonne localisation dans le centre de Kaolack. Horaires très pratiques."
+  }
+]
