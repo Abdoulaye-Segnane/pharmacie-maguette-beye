@@ -5,7 +5,8 @@
     "excerpt": "En saison sèche, le risque de déshydratation augmente rapidement. Découvrez nos conseils pratiques pour maintenir une bonne hydratation au quotidien.",
     "date": "2026-06-15",
     "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80",
-    "slug": "hydratation-chaleur-senegal"
+    "slug": "hydratation-chaleur-senegal",
+    "category": "Hydratation"
   },
   {
     "id": "2",
@@ -13,7 +14,8 @@
     "excerpt": "Le paludisme reste un défi de santé publique en Afrique de l'Ouest. Votre pharmacien vous guide sur les meilleures mesures préventives et les traitements adaptés.",
     "date": "2026-05-28",
     "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80",
-    "slug": "paludisme-prevention-traitement"
+    "slug": "paludisme-prevention-traitement",
+    "category": "Prévention"
   },
   {
     "id": "3",
@@ -21,6 +23,7 @@
     "excerpt": "Vitamines C, D, zinc : découvrez quels compléments soutiennent votre système immunitaire et comment les intégrer à votre routine santé.",
     "date": "2026-05-10",
     "image": "https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=800&q=80",
-    "slug": "vitamines-immunite"
+    "slug": "vitamines-immunite",
+    "category": "Immunité"
   }
 ]
