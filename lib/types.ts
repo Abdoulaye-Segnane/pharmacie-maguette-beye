@@ -61,6 +61,7 @@ export interface Article {
   date: string
   image: string
   slug: string
+  category: string
 }
 
 export interface Feature {
@@ -68,4 +69,27 @@ export interface Feature {
   title: string
   description: string
   icon: 'shield' | 'user' | 'heart' | 'map-pin'
+}
+
+export interface Product {
+  id: string
+  name: string
+  slug: string
+  category: string
+  description: string
+  image: string
+  available: boolean
+}
+
+export interface TeamMember {
+  id: string
+  name: string
+  role: string
+  photo: string
+}
+
+export interface ContactFormData {
+  name: string
+  email: string
+  message: string
 }
