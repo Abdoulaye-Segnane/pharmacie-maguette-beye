@@ -12,13 +12,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/contact`,   changeFrequency: 'yearly',  priority: 0.5 },
   ]
 
-  const productRoutes: MetadataRoute.Sitemap = productsData.map((p) => ({
+  const products = productsData satisfies { slug: string }[]
+  const articles = articlesData satisfies { slug: string }[]
+
+  const productRoutes: MetadataRoute.Sitemap = products.map((p) => ({
     url: `${SITE_URL}/catalog/${p.slug}`,
     changeFrequency: 'monthly',
     priority: 0.6,
   }))
 
-  const articleRoutes: MetadataRoute.Sitemap = articlesData.map((a) => ({
+  const articleRoutes: MetadataRoute.Sitemap = articles.map((a) => ({
     url: `${SITE_URL}/blog/${a.slug}`,
     changeFrequency: 'weekly',
     priority: 0.7,
