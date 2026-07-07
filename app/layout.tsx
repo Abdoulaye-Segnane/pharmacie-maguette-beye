@@ -32,23 +32,23 @@ const localBusinessSchema = {
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '08:00',
-      closes: '20:00',
+      opens: contact.hours.weekdays.open.replace('h', ':'),
+      closes: contact.hours.weekdays.close.replace('h', ':'),
     },
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Saturday'],
-      opens: '08:00',
-      closes: '18:00',
+      opens: contact.hours.saturday.open.replace('h', ':'),
+      closes: contact.hours.saturday.close.replace('h', ':'),
     },
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Sunday'],
-      opens: '09:00',
-      closes: '14:00',
+      opens: contact.hours.sunday.open.replace('h', ':'),
+      closes: contact.hours.sunday.close.replace('h', ':'),
     },
   ],
-} as const
+}
 
 export default function RootLayout({
   children,

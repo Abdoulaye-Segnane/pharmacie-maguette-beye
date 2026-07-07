@@ -51,7 +51,12 @@ export default async function BlogArticlePage(
   if (!article) notFound()
 
   const filePath = path.join(process.cwd(), 'content', 'blog', `${slug}.mdx`)
-  const fileContents = await readFile(filePath, 'utf8')
+  let fileContents: string
+  try {
+    fileContents = await readFile(filePath, 'utf8')
+  } catch {
+    return notFound()
+  }
   const { content } = matter(fileContents)
 
   // Extract ToC from H2 headings

@@ -51,7 +51,6 @@ export default async function ProductPage(
       availability: product.available
         ? 'https://schema.org/InStock'
         : 'https://schema.org/OutOfStock',
-      priceCurrency: 'XOF',
       url: `${SITE_URL}/catalog/${product.slug}`,
       seller: { '@type': 'Organization', name: PHARMACY_NAME },
     },
