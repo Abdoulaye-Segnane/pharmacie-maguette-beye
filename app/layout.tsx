@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import { baseMetadata } from '@/lib/seo'
 import { PHARMACY_NAME, SITE_URL, contact } from '@/lib/constants'
@@ -14,6 +14,10 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = baseMetadata
+
+export const viewport: Viewport = {
+  themeColor: '#1A4D35',
+}
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -60,6 +64,9 @@ export default function RootLayout({
       lang="fr"
       className={`${plusJakartaSans.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preconnect" href="https://images.unsplash.com" />
+      </head>
       <body className="min-h-full flex flex-col font-sans bg-white text-gray-dark">
         <script
           type="application/ld+json"
