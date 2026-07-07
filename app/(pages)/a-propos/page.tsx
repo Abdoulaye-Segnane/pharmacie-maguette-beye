@@ -78,6 +78,7 @@ export default function AboutPage() {
                   src="https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80"
                   alt="Intérieur de la Pharmacie Maguette Beye"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
@@ -123,6 +124,7 @@ export default function AboutPage() {
                       src={member.photo}
                       alt={member.name}
                       fill
+                      sizes="96px"
                       className="object-cover"
                     />
                   </div>

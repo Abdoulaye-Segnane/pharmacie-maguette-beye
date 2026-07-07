@@ -11,6 +11,7 @@ export default function Hero() {
         src={HERO_IMAGE_URL}
         alt="Pharmacie Maguette Beye — Kaolack, Sénégal"
         fill
+        sizes="100vw"
         className="object-cover object-center"
         priority
       />
