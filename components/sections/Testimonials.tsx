@@ -1,10 +1,37 @@
-import Card from '@/components/ui/Card'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import type { Testimonial } from '@/lib/types'
 import testimonialsData from '@/data/testimonials.json'
 import type { ReactNode } from 'react'
 
 const testimonials = testimonialsData satisfies Testimonial[]
+
+const AVATAR_COLORS = [
+  'bg-green-primary',
+  'bg-gold/90',
+  'bg-teal-600',
+  'bg-emerald-700',
+] as const
+
+function getInitials(name: string): string {
+  return name
+    .split(' ')
+    .map((n) => n[0])
+    .join('')
+    .slice(0, 2)
+    .toUpperCase()
+}
+
+function InitialAvatar({ name, index }: { name: string; index: number }): ReactNode {
+  const color = AVATAR_COLORS[index % AVATAR_COLORS.length]
+  return (
+    <span
+      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white ${color}`}
+      aria-hidden="true"
+    >
+      {getInitials(name)}
+    </span>
+  )
+}
 
 function StarRating({ rating }: { rating: number }): ReactNode {
   return (
@@ -16,7 +43,7 @@ function StarRating({ rating }: { rating: number }): ReactNode {
           height="16"
           viewBox="0 0 24 24"
           fill={i < rating ? '#D4A574' : 'none'}
-          stroke={i < rating ? '#D4A574' : '#D1D5DB'}
+          stroke={i < rating ? '#D4A574' : 'rgba(255,255,255,0.25)'}
           strokeWidth="1.5"
           aria-hidden="true"
         >
@@ -27,45 +54,49 @@ function StarRating({ rating }: { rating: number }): ReactNode {
   )
 }
 
-function TestimonialCard({ testimonial }: { testimonial: Testimonial }): ReactNode {
+function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; index: number }): ReactNode {
   return (
-    <Card className="flex h-full flex-col p-6">
+    <div className="flex h-full flex-col rounded-xl border border-white/10 bg-white/10 p-6 backdrop-blur-sm">
       <StarRating rating={testimonial.rating} />
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-gray-dark/80">
+      <p className="mt-4 flex-1 text-sm leading-relaxed text-white/85">
         &ldquo;{testimonial.text}&rdquo;
       </p>
-      <div className="mt-4 border-t border-gray-100 pt-4">
-        <div className="text-sm font-semibold text-green-dark">{testimonial.name}</div>
-        <div className="text-xs text-gray-dark/60">{testimonial.role}</div>
+      <div className="mt-5 flex items-center gap-3 border-t border-white/10 pt-4">
+        <InitialAvatar name={testimonial.name} index={index} />
+        <div>
+          <div className="text-sm font-semibold text-white">{testimonial.name}</div>
+          <div className="text-xs text-white/55">{testimonial.role}</div>
+        </div>
       </div>
-    </Card>
+    </div>
   )
 }
 
 export default function Testimonials() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-green-dark text-white border-t border-green-primary/20">
       <div className="mx-auto max-w-6xl px-4">
-        <AnimatedSection className="mb-12 text-center">
-          <h2 className="text-3xl font-bold text-green-dark">
+        <AnimatedSection className="mb-14 text-center">
+          <h2 className="text-3xl font-bold md:text-4xl">
             Ce que disent nos clients
           </h2>
+          <div className="mx-auto mt-4 h-0.5 w-12 bg-gold/60" />
         </AnimatedSection>
 
-        {/* Mobile carousel — CSS scroll-snap */}
+        {/* Mobile carousel */}
         <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:hidden">
-          {testimonials.map((t) => (
+          {testimonials.map((t, i) => (
             <div key={t.id} className="w-[85vw] flex-shrink-0 snap-start">
-              <TestimonialCard testimonial={t} />
+              <TestimonialCard testimonial={t} index={i} />
             </div>
           ))}
         </div>
 
-        {/* Desktop grid */}
-        <div className="hidden grid-cols-2 gap-6 md:grid lg:grid-cols-4">
+        {/* Desktop 2-col grid */}
+        <div className="hidden gap-6 md:grid md:grid-cols-2">
           {testimonials.map((t, i) => (
             <AnimatedSection key={t.id} delay={i * 0.1}>
-              <TestimonialCard testimonial={t} />
+              <TestimonialCard testimonial={t} index={i} />
             </AnimatedSection>
           ))}
         </div>

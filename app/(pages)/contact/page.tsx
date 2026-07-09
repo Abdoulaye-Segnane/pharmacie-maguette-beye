@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { generateMetadata as genMeta } from '@/lib/seo'
-import { contact } from '@/lib/constants'
+import { contact, PHARMACY_NAME } from '@/lib/constants'
 import { formatPhone, toTelUri } from '@/lib/utils'
 import ContactForm from '@/components/sections/contact/ContactForm'
 
@@ -11,27 +11,37 @@ export const metadata: Metadata = genMeta({
   canonical: '/contact',
 })
 
+const MAPS_SRC = `https://maps.google.com/maps?q=Pharmacie+Maguette+Beye+Kaolack+Senegal&output=embed`
+
 export default function ContactPage() {
   return (
-    <section className="py-16 bg-gray-50 min-h-screen">
+    <section className="py-16 bg-white min-h-screen">
       <div className="mx-auto max-w-5xl px-4">
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold text-green-dark">Contactez-nous</h1>
-          <p className="mx-auto mt-4 max-w-xl text-gray-dark/70">
+          <div className="mx-auto mt-4 h-0.5 w-12 bg-green-primary/50" />
+          <p className="mx-auto mt-5 max-w-xl text-gray-dark/70">
             Notre équipe est à votre écoute. Remplissez le formulaire ou contactez-nous directement.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start">
-          {/* Infos de contact */}
-          <div className="rounded-2xl bg-white p-8 shadow-sm border border-gray-100">
-            <h2 className="mb-6 text-xl font-semibold text-green-dark">Nos coordonnées</h2>
+        {/* 60/40 : formulaire gauche, infos droite */}
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:items-start">
+          {/* Formulaire — 3/5 ≈ 60% */}
+          <div className="lg:col-span-3 rounded-2xl bg-white p-8 shadow-sm border border-gray-100">
+            <h2 className="mb-6 text-xl font-bold text-green-dark">Envoyer un message</h2>
+            <ContactForm />
+          </div>
+
+          {/* Infos — 2/5 ≈ 40% */}
+          <div className="lg:col-span-2 rounded-2xl bg-white p-8 shadow-sm border border-gray-100">
+            <h2 className="mb-6 text-xl font-bold text-green-dark">Nos coordonnées</h2>
             <dl className="space-y-5">
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-wider text-gray-dark/50">
                   Adresse
                 </dt>
-                <dd className="mt-1 text-gray-dark">{contact.address}</dd>
+                <dd className="mt-1 text-sm text-gray-dark leading-relaxed">{contact.address}</dd>
               </div>
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-wider text-gray-dark/50">
@@ -40,7 +50,7 @@ export default function ContactPage() {
                 <dd className="mt-1">
                   <a
                     href={toTelUri(contact.phone)}
-                    className="text-lg font-semibold text-green-primary hover:text-green-dark transition-colors"
+                    className="text-lg font-bold text-green-primary hover:text-green-dark transition-colors"
                   >
                     {formatPhone(contact.phone)}
                   </a>
@@ -53,7 +63,7 @@ export default function ContactPage() {
                 <dd className="mt-1">
                   <a
                     href={`mailto:${contact.email}`}
-                    className="text-gray-dark hover:text-green-primary transition-colors"
+                    className="text-sm text-gray-dark hover:text-green-primary transition-colors"
                   >
                     {contact.email}
                   </a>
@@ -71,12 +81,24 @@ export default function ContactPage() {
               </div>
             </dl>
           </div>
+        </div>
 
-          {/* Formulaire */}
-          <div className="rounded-2xl bg-white p-8 shadow-sm border border-gray-100">
-            <h2 className="mb-6 text-xl font-semibold text-green-dark">Envoyer un message</h2>
-            <ContactForm />
+        {/* Carte Google Maps — pleine largeur */}
+        <div className="mt-10">
+          <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-sm h-80">
+            <iframe
+              src={MAPS_SRC}
+              width="100%"
+              height="100%"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={`Localisation ${PHARMACY_NAME}`}
+              className="border-0"
+            />
           </div>
+          <p className="mt-3 text-center text-xs text-gray-dark/50">
+            Si la carte ne s&apos;affiche pas : {contact.address}
+          </p>
         </div>
       </div>
     </section>

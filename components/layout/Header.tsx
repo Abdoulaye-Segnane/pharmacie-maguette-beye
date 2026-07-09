@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { navLinks, contact, PHARMACY_BRAND_NAME } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 import MobileNav from '@/components/layout/MobileNav'
+import PharmacyCross from '@/components/ui/PharmacyCross'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,13 +15,16 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-green-primary/5 backdrop-blur-sm border-b border-green-primary/10">
       <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="flex flex-col">
-          <span className="text-green-dark font-bold text-sm leading-tight">
-            Pharmacie
-          </span>
-          <span className="text-green-primary text-xs font-medium tracking-widest">
-            {PHARMACY_BRAND_NAME}
-          </span>
+        <Link href="/" className="flex items-center gap-2.5">
+          <PharmacyCross className="h-6 w-6 text-green-primary shrink-0" />
+          <div className="flex flex-col">
+            <span className="text-green-dark font-bold text-sm leading-tight">
+              Pharmacie
+            </span>
+            <span className="text-green-primary text-xs font-medium tracking-widest">
+              {PHARMACY_BRAND_NAME}
+            </span>
+          </div>
         </Link>
 
         <ul className="hidden md:flex items-center gap-6">

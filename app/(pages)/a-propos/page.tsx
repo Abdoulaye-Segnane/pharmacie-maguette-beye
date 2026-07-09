@@ -2,7 +2,9 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { generateMetadata as genMeta } from '@/lib/seo'
 import AnimatedSection from '@/components/ui/AnimatedSection'
+import PharmacyCross from '@/components/ui/PharmacyCross'
 import { team } from '@/data/team'
+import { HERO_IMAGE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = genMeta({
   title: 'À propos',
@@ -48,28 +50,53 @@ const values = [
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-green-dark py-20 text-white">
-        <div className="mx-auto max-w-4xl px-4 text-center">
-          <AnimatedSection variant="fadeIn">
-            <span className="inline-flex items-center rounded-full bg-gold/20 px-4 py-1.5 text-sm font-medium text-gold ring-1 ring-gold/30">
-              Depuis 2005
-            </span>
-          </AnimatedSection>
-          <AnimatedSection variant="slideUp" delay={0.1}>
-            <h1 className="mt-6 text-4xl font-bold md:text-5xl">Notre histoire</h1>
-          </AnimatedSection>
-          <AnimatedSection variant="slideUp" delay={0.2}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-white/80">
-              La Pharmacie Maguette Beye est une pharmacie indépendante au service des habitants
-              de Kaolack et de la région depuis plus de vingt ans.
-            </p>
-          </AnimatedSection>
+      {/* Hero — même traitement gradient que la page d'accueil */}
+      <section className="relative flex min-h-[420px] items-center overflow-hidden">
+        <Image
+          src={HERO_IMAGE_URL}
+          alt="Intérieur de la Pharmacie Maguette Beye"
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+          priority
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to right, rgba(26,77,53,0.92) 0%, rgba(26,77,53,0.60) 42%, rgba(26,77,53,0.15) 68%, transparent 88%)',
+          }}
+        />
+        {/* Croix watermark */}
+        <div
+          className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden md:block opacity-10 text-white"
+          aria-hidden="true"
+        >
+          <PharmacyCross className="h-64 w-64" />
+        </div>
+
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 lg:px-8 py-20">
+          <div className="max-w-xl text-white">
+            <AnimatedSection variant="fadeIn">
+              <span className="inline-flex items-center rounded-full bg-gold/20 px-4 py-1.5 text-sm font-medium text-gold ring-1 ring-gold/30">
+                Depuis 2005
+              </span>
+            </AnimatedSection>
+            <AnimatedSection variant="slideUp" delay={0.1}>
+              <h1 className="mt-6 text-4xl font-bold leading-tight md:text-5xl">Notre histoire</h1>
+            </AnimatedSection>
+            <AnimatedSection variant="slideUp" delay={0.2}>
+              <p className="mt-6 text-lg text-white/85">
+                Une pharmacie indépendante au service des habitants de Kaolack
+                et de la région depuis plus de vingt ans.
+              </p>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
       {/* Histoire */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white border-t border-green-primary/10">
         <div className="mx-auto max-w-4xl px-4">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
             <AnimatedSection>
@@ -84,7 +111,8 @@ export default function AboutPage() {
               </div>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
-              <h2 className="text-2xl font-bold text-green-dark mb-6">Une pharmacie de confiance</h2>
+              <h2 className="text-2xl font-bold text-green-dark mb-4">Une pharmacie de confiance</h2>
+              <div className="h-0.5 w-10 bg-green-primary/50 mb-6" />
               <div className="space-y-4 text-gray-dark/80 leading-relaxed">
                 <p>
                   Fondée en 2005 par Maguette Beye, pharmacienne diplômée de la Faculté de Médecine
@@ -106,11 +134,12 @@ export default function AboutPage() {
       </section>
 
       {/* Équipe */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-white border-t border-green-primary/10">
         <div className="mx-auto max-w-5xl px-4">
-          <AnimatedSection className="mb-12 text-center">
+          <AnimatedSection className="mb-14 text-center">
             <h2 className="text-3xl font-bold text-green-dark">Notre équipe</h2>
-            <p className="mx-auto mt-4 max-w-xl text-gray-dark/70">
+            <div className="mx-auto mt-4 h-0.5 w-12 bg-green-primary/50" />
+            <p className="mx-auto mt-5 max-w-xl text-gray-dark/70">
               Des professionnels de santé dévoués, à votre service chaque jour.
             </p>
           </AnimatedSection>
@@ -138,21 +167,22 @@ export default function AboutPage() {
       </section>
 
       {/* Valeurs */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white border-t border-green-primary/10">
         <div className="mx-auto max-w-5xl px-4">
-          <AnimatedSection className="mb-12 text-center">
+          <AnimatedSection className="mb-14 text-center">
             <h2 className="text-3xl font-bold text-green-dark">Nos valeurs</h2>
+            <div className="mx-auto mt-4 h-0.5 w-12 bg-green-primary/50" />
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
             {values.map((value, i) => (
               <AnimatedSection key={value.id} delay={i * 0.1}>
-                <div className="flex flex-col items-center text-center p-6">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-primary/10 text-green-primary">
-                    {value.icon}
+                <div className="flex gap-5 items-start">
+                  <div className="shrink-0 text-green-primary">{value.icon}</div>
+                  <div>
+                    <h3 className="font-bold text-green-dark text-lg">{value.title}</h3>
+                    <p className="mt-2 text-sm text-gray-dark/70 leading-relaxed">{value.description}</p>
                   </div>
-                  <h3 className="mb-2 text-lg font-semibold text-green-dark">{value.title}</h3>
-                  <p className="text-sm text-gray-dark/70 leading-relaxed">{value.description}</p>
                 </div>
               </AnimatedSection>
             ))}

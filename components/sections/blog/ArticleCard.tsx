@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Badge from '@/components/ui/Badge'
+import ChevronRight from '@/components/ui/ChevronRight'
 import { formatDate } from '@/lib/utils'
 import type { Article } from '@/lib/types'
 
@@ -36,8 +37,9 @@ export default function ArticleCard({ article }: ArticleCardProps) {
         <p className="mb-4 text-sm text-gray-dark/70 line-clamp-3 flex-1">
           {article.excerpt}
         </p>
-        <span className="text-sm font-medium text-green-primary">
-          Lire la suite →
+        <span className="inline-flex items-center gap-1 text-sm font-semibold text-green-primary">
+          Lire la suite
+          <ChevronRight size={14} />
         </span>
       </div>
     </Link>

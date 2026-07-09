@@ -69,6 +69,7 @@ export interface Feature {
   title: string
   description: string
   icon: 'shield' | 'user' | 'heart' | 'map-pin'
+  stat: string
 }
 
 export interface Product {

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Badge from '@/components/ui/Badge'
+import ChevronRight from '@/components/ui/ChevronRight'
 import type { Product } from '@/lib/types'
 
 interface ProductCardProps {
@@ -34,8 +35,9 @@ export default function ProductCard({ product }: ProductCardProps) {
         <p className="text-sm text-gray-dark/70 line-clamp-2 flex-1">
           {product.description}
         </p>
-        <span className="mt-3 text-sm font-medium text-green-primary">
-          Voir le détail →
+        <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-green-primary">
+          Voir le détail
+          <ChevronRight size={14} />
         </span>
       </div>
     </Link>
