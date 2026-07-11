@@ -115,9 +115,9 @@ export default function AboutPage() {
               <div className="h-0.5 w-10 bg-green-primary/50 mb-6" />
               <div className="space-y-4 text-gray-dark/80 leading-relaxed">
                 <p>
-                  Fondée en 2005 par Maguette Beye, pharmacienne diplômée de la Faculté de Médecine
-                  de Dakar, notre officine s&rsquo;est imposée comme un acteur de référence de la
-                  santé à Kaolack.
+                  Fondée en 2005 par le Dr Mamadou Ndiaye, pharmacien diplômé de la Faculté de
+                  Médecine de Dakar, notre officine s&rsquo;est imposée comme un acteur de
+                  référence de la santé à Kaolack.
                 </p>
                 <p>
                   Notre mission est simple : rendre les soins de qualité accessibles à tous, avec

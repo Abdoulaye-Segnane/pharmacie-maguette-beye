@@ -3,8 +3,8 @@ import type { TeamMember } from '@/lib/types'
 export const team = [
   {
     id: '1',
-    name: 'Maguette Beye',
-    role: 'Pharmacienne titulaire',
+    name: 'Dr Mamadou Ndiaye',
+    role: 'Pharmacien titulaire',
     photo: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80',
   },
   {
