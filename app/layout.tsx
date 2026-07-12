@@ -33,25 +33,17 @@ const localBusinessSchema = {
     addressCountry: 'SN',
   },
   openingHoursSpecification: [
-    {
+    { dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], slot: contact.hours.weekdays },
+    { dayOfWeek: ['Saturday'], slot: contact.hours.saturday },
+    { dayOfWeek: ['Sunday'], slot: contact.hours.sunday },
+  ]
+    .filter(({ slot }) => !slot.closed)
+    .map(({ dayOfWeek, slot }) => ({
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: contact.hours.weekdays.open.replace('h', ':'),
-      closes: contact.hours.weekdays.close.replace('h', ':'),
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Saturday'],
-      opens: contact.hours.saturday.open.replace('h', ':'),
-      closes: contact.hours.saturday.close.replace('h', ':'),
-    },
-    {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Sunday'],
-      opens: contact.hours.sunday.open.replace('h', ':'),
-      closes: contact.hours.sunday.close.replace('h', ':'),
-    },
-  ],
+      dayOfWeek,
+      opens: slot.open.replace('h', ':'),
+      closes: slot.close.replace('h', ':'),
+    })),
 }
 
 export default function RootLayout({

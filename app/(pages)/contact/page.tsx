@@ -76,7 +76,7 @@ export default function ContactPage() {
                 <dd className="mt-1 space-y-1 text-sm text-gray-dark/80">
                   <p>Lun–Ven : {contact.hours.weekdays.open} – {contact.hours.weekdays.close}</p>
                   <p>Samedi : {contact.hours.saturday.open} – {contact.hours.saturday.close}</p>
-                  <p>Dimanche : {contact.hours.sunday.open} – {contact.hours.sunday.close}</p>
+                  <p>Dimanche : {contact.hours.sunday.closed ? 'Fermé' : `${contact.hours.sunday.open} – ${contact.hours.sunday.close}`}</p>
                 </dd>
               </div>
             </dl>

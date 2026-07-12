@@ -19,6 +19,7 @@ function checkIsOpen(): boolean {
   const day = now.getUTCDay()
   const dayKey: DayKey = day === 0 ? 'sunday' : day === 6 ? 'saturday' : 'weekdays'
   const slot = contact.hours[dayKey]
+  if (slot.closed) return false
   return currentMinutes >= parseMinutes(slot.open) && currentMinutes < parseMinutes(slot.close)
 }
 
@@ -72,7 +73,7 @@ export default function Hours() {
                       {label}
                     </div>
                     <div className="text-2xl font-bold text-green-dark">
-                      {formatHours(slot.open, slot.close)}
+                      {slot.closed ? 'Fermé' : formatHours(slot.open, slot.close)}
                     </div>
                   </div>
                 )

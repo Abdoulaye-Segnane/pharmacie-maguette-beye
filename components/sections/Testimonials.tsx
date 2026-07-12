@@ -83,19 +83,15 @@ export default function Testimonials() {
           <div className="mx-auto mt-4 h-0.5 w-12 bg-gold/60" />
         </AnimatedSection>
 
-        {/* Mobile carousel */}
-        <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:hidden">
+        {/* Carousel mobile → grille 2 colonnes desktop.
+            Une seule liste rendue : aucun doublon dans le DOM. */}
+        <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:snap-none md:pb-0">
           {testimonials.map((t, i) => (
-            <div key={t.id} className="w-[85vw] flex-shrink-0 snap-start">
-              <TestimonialCard testimonial={t} index={i} />
-            </div>
-          ))}
-        </div>
-
-        {/* Desktop 2-col grid */}
-        <div className="hidden gap-6 md:grid md:grid-cols-2">
-          {testimonials.map((t, i) => (
-            <AnimatedSection key={t.id} delay={i * 0.1}>
+            <AnimatedSection
+              key={t.id}
+              delay={i * 0.1}
+              className="w-[85vw] shrink-0 snap-start md:w-auto md:shrink"
+            >
               <TestimonialCard testimonial={t} index={i} />
             </AnimatedSection>
           ))}

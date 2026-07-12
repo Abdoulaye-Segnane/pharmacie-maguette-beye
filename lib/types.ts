@@ -8,6 +8,8 @@ export interface NavItem {
 export interface HoursSlot {
   open: string;
   close: string;
+  /** Si true, le jour est fermé — open/close ignorés, affiché « Fermé ». */
+  closed?: boolean;
 }
 
 export interface ContactInfo {

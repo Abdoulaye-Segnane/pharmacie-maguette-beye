@@ -72,7 +72,7 @@ export default function Footer() {
             <ul className="text-sm text-white/70 space-y-1">
               <li>Lun – Ven : {formatHours(contact.hours.weekdays.open, contact.hours.weekdays.close)}</li>
               <li>Samedi : {formatHours(contact.hours.saturday.open, contact.hours.saturday.close)}</li>
-              <li>Dimanche : {formatHours(contact.hours.sunday.open, contact.hours.sunday.close)}</li>
+              <li>Dimanche : {contact.hours.sunday.closed ? 'Fermé' : formatHours(contact.hours.sunday.open, contact.hours.sunday.close)}</li>
             </ul>
           </div>
 
