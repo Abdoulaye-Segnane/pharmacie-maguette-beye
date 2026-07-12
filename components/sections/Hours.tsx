@@ -13,14 +13,27 @@ function parseMinutes(time: string): number {
   return h * 60 + (m ?? 0)
 }
 
+/** Heure et jour courants dans le fuseau de Dakar (Africa/Dakar = UTC+0 toute l'année). */
+function getDakarMoment(): { minutes: number; dayKey: DayKey } {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Africa/Dakar',
+    hourCycle: 'h23',
+    weekday: 'short',
+    hour: '2-digit',
+    minute: '2-digit',
+  }).formatToParts(new Date())
+  const get = (type: string): string => parts.find((p) => p.type === type)?.value ?? ''
+  const minutes = Number(get('hour')) * 60 + Number(get('minute'))
+  const weekday = get('weekday')
+  const dayKey: DayKey = weekday === 'Sun' ? 'sunday' : weekday === 'Sat' ? 'saturday' : 'weekdays'
+  return { minutes, dayKey }
+}
+
 function checkIsOpen(): boolean {
-  const now = new Date()
-  const currentMinutes = now.getUTCHours() * 60 + now.getUTCMinutes()
-  const day = now.getUTCDay()
-  const dayKey: DayKey = day === 0 ? 'sunday' : day === 6 ? 'saturday' : 'weekdays'
+  const { minutes, dayKey } = getDakarMoment()
   const slot = contact.hours[dayKey]
   if (slot.closed) return false
-  return currentMinutes >= parseMinutes(slot.open) && currentMinutes < parseMinutes(slot.close)
+  return minutes >= parseMinutes(slot.open) && minutes < parseMinutes(slot.close)
 }
 
 const hoursRows: { key: DayKey; label: string }[] = [

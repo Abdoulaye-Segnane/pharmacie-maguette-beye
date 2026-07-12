@@ -60,13 +60,9 @@ export default function ContactPage() {
                 <dt className="text-xs font-semibold uppercase tracking-wider text-gray-dark/50">
                   Email
                 </dt>
-                <dd className="mt-1">
-                  <a
-                    href={`mailto:${contact.email}`}
-                    className="text-sm text-gray-dark hover:text-green-primary transition-colors"
-                  >
-                    {contact.email}
-                  </a>
+                <dd className="mt-1 text-sm text-gray-dark">
+                  {contact.email}{' '}
+                  <span className="text-xs text-gray-dark/50">(bientôt disponible)</span>
                 </dd>
               </div>
               <div>

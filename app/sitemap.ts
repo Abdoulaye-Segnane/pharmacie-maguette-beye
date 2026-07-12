@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/blog`,      changeFrequency: 'weekly',  priority: 0.8 },
     { url: `${SITE_URL}/a-propos`,  changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE_URL}/contact`,   changeFrequency: 'yearly',  priority: 0.5 },
+    { url: `${SITE_URL}/mentions-legales`, changeFrequency: 'yearly', priority: 0.3 },
   ]
 
   const products = productsData satisfies { slug: string }[]

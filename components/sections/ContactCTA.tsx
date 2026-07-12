@@ -40,12 +40,10 @@ export default function ContactCTA() {
 
               <div>
                 <h3 className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-dark/50">Email</h3>
-                <a
-                  href={`mailto:${contact.email}`}
-                  className="text-gray-dark transition-colors hover:text-green-primary"
-                >
-                  {contact.email}
-                </a>
+                <p className="text-gray-dark">
+                  {contact.email}{' '}
+                  <span className="text-xs text-gray-dark/50">(bientôt disponible)</span>
+                </p>
               </div>
 
               <div className="flex flex-col gap-3 pt-2 sm:flex-row">

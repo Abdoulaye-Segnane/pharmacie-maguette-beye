@@ -11,16 +11,16 @@ export const features: Feature[] = [
   {
     id: '2',
     title: 'Pharmacien disponible',
-    description: 'Notre équipe qualifiée est à votre écoute tous les jours pour répondre à vos questions de santé.',
+    description: 'Notre équipe qualifiée est à votre écoute du lundi au samedi pour répondre à vos questions de santé.',
     icon: 'user',
-    stat: 'Disponibles 7j/7',
+    stat: 'Disponibles 6j/7',
   },
   {
     id: '3',
     title: 'Conseil personnalisé',
     description: 'Nous prenons le temps de comprendre votre situation pour un accompagnement adapté.',
     icon: 'heart',
-    stat: '20+ ans d\'expérience',
+    stat: 'À l\'écoute de chaque patient',
   },
   {
     id: '4',
