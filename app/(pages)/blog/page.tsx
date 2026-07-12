@@ -1,8 +1,13 @@
 import type { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import { generateMetadata as genMeta } from '@/lib/seo'
-import BlogClient from '@/components/sections/blog/BlogClient'
+import BlogSkeleton from '@/components/blog/BlogSkeleton'
 import type { Article } from '@/lib/types'
 import articlesData from '@/data/articles.json'
+
+const BlogClient = dynamic(() => import('@/components/sections/blog/BlogClient'), {
+  loading: () => <BlogSkeleton />,
+})
 
 export const metadata: Metadata = genMeta({
   title: 'Conseils santé',

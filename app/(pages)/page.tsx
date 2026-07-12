@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { generateMetadata as genMeta } from '@/lib/seo'
+import GardesSkeleton from '@/components/sections/GardesSkeleton'
 import Hero from '@/components/sections/Hero'
 import Features from '@/components/sections/Features'
 import Hours from '@/components/sections/Hours'
@@ -40,7 +42,9 @@ export default function HomePage() {
       <Hero />
       <Features />
       <Hours />
-      <GardesSection />
+      <Suspense fallback={<GardesSkeleton />}>
+        <GardesSection />
+      </Suspense>
       <Testimonials />
       <BlogPreview />
       <Faq />

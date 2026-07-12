@@ -1,8 +1,15 @@
 import type { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import { generateMetadata as genMeta } from '@/lib/seo'
-import CatalogClient from '@/components/sections/catalog/CatalogClient'
+import CatalogSkeleton from '@/components/products/CatalogSkeleton'
 import type { Product } from '@/lib/types'
 import productsData from '@/data/products.json'
+
+// Chargé en lazy : le squelette s'affiche pendant le chargement du chunk
+// (navigation client) ; le contenu reste rendu côté serveur (SSR) pour le SEO.
+const CatalogClient = dynamic(() => import('@/components/sections/catalog/CatalogClient'), {
+  loading: () => <CatalogSkeleton />,
+})
 
 export const metadata: Metadata = genMeta({
   title: 'Catalogue',

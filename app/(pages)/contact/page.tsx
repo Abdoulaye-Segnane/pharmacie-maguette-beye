@@ -1,8 +1,13 @@
 import type { Metadata } from 'next'
 import { generateMetadata as genMeta } from '@/lib/seo'
 import { contact, PHARMACY_NAME } from '@/lib/constants'
+import dynamic from 'next/dynamic'
 import { formatPhone, toTelUri } from '@/lib/utils'
-import ContactForm from '@/components/sections/contact/ContactForm'
+import ContactSkeleton from '@/components/forms/ContactSkeleton'
+
+const ContactForm = dynamic(() => import('@/components/sections/contact/ContactForm'), {
+  loading: () => <ContactSkeleton />,
+})
 
 export const metadata: Metadata = genMeta({
   title: 'Contact',
