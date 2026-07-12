@@ -91,3 +91,14 @@ export interface TeamMember {
   photo: string
 }
 
+export interface GardeEntry {
+  /** Date ISO au format YYYY-MM-DD. */
+  date: string
+  /** « Fête nationale » | « Fête musulmane » | « Fête chrétienne ». */
+  type: string
+  label: string
+  heures_ouverture: string
+  heures_fermeture: string
+  note: string
+}
+

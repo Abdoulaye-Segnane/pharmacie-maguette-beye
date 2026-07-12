@@ -4,6 +4,7 @@ import { contact, HERO_IMAGE_URL } from '@/lib/constants'
 import { toTelUri } from '@/lib/utils'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import PharmacyCross from '@/components/ui/PharmacyCross'
+import AfricanPattern from '@/components/ui/AfricanPattern'
 import ChevronRight from '@/components/ui/ChevronRight'
 
 export default function Hero() {
@@ -27,6 +28,12 @@ export default function Hero() {
         }}
       />
 
+      {/* Motif africain décoratif — coin droit */}
+      <AfricanPattern
+        id="hero"
+        className="pointer-events-none absolute right-0 top-0 bottom-0 hidden w-1/3 text-gold opacity-[0.07] md:block"
+      />
+
       {/* Croix watermark décorative */}
       <div
         className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden md:block opacity-10 text-white"
@@ -44,7 +51,7 @@ export default function Hero() {
                 <span className="absolute inline-flex h-full w-full rounded-full bg-gold animate-ping opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-gold" />
               </span>
-              Pharmacie de confiance à Kaolack
+              Au cœur de Kaolack depuis 2010
             </span>
           </AnimatedSection>
 
@@ -56,8 +63,8 @@ export default function Hero() {
 
           <AnimatedSection variant="slideUp" delay={0.2}>
             <p className="mt-6 text-lg text-white/85 md:text-xl">
-              Médicaments authentiques, conseils experts et service chaleureux
-              au cœur de Kaolack, Sénégal.
+              Médicaments authentiques et conseil personnalisé
+              pour toute la région du Sine-Saloum.
             </p>
           </AnimatedSection>
 

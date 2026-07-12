@@ -4,7 +4,7 @@ import { generateMetadata as genMeta } from '@/lib/seo'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import PharmacyCross from '@/components/ui/PharmacyCross'
 import { team } from '@/data/team'
-import { HERO_IMAGE_URL } from '@/lib/constants'
+import { ABOUT_HERO_IMAGE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = genMeta({
   title: 'À propos',
@@ -53,8 +53,8 @@ export default function AboutPage() {
       {/* Hero — même traitement gradient que la page d'accueil */}
       <section className="relative flex min-h-[420px] items-center overflow-hidden">
         <Image
-          src={HERO_IMAGE_URL}
-          alt="Intérieur de la Pharmacie Maguette Beye"
+          src={ABOUT_HERO_IMAGE_URL}
+          alt="Pharmacien de la Pharmacie Maguette Beye"
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -79,7 +79,7 @@ export default function AboutPage() {
           <div className="max-w-xl text-white">
             <AnimatedSection variant="fadeIn">
               <span className="inline-flex items-center rounded-full bg-gold/20 px-4 py-1.5 text-sm font-medium text-gold ring-1 ring-gold/30">
-                Depuis 2005
+                Depuis 2010
               </span>
             </AnimatedSection>
             <AnimatedSection variant="slideUp" delay={0.1}>
@@ -88,7 +88,7 @@ export default function AboutPage() {
             <AnimatedSection variant="slideUp" delay={0.2}>
               <p className="mt-6 text-lg text-white/85">
                 Une pharmacie indépendante au service des habitants de Kaolack
-                et de la région depuis plus de vingt ans.
+                et de toute la région du Sine-Saloum depuis 2010.
               </p>
             </AnimatedSection>
           </div>
@@ -102,8 +102,8 @@ export default function AboutPage() {
             <AnimatedSection>
               <div className="relative h-72 overflow-hidden rounded-2xl lg:h-96">
                 <Image
-                  src="https://images.unsplash.com/photo-1576671081837-49000212a370?w=800&q=80"
-                  alt="Intérieur de la Pharmacie Maguette Beye"
+                  src="https://images.unsplash.com/photo-1758573467057-955f803660a9?w=800&q=80"
+                  alt="Pharmacien préparant une ordonnance à la Pharmacie Maguette Beye"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
@@ -115,7 +115,7 @@ export default function AboutPage() {
               <div className="h-0.5 w-10 bg-green-primary/50 mb-6" />
               <div className="space-y-4 text-gray-dark/80 leading-relaxed">
                 <p>
-                  Fondée en 2005 par le Dr Mamadou Ndiaye, pharmacien diplômé de la Faculté de
+                  Fondée en 2010 par le Dr Mamadou Ndiaye, pharmacien diplômé de la Faculté de
                   Médecine de Dakar, notre officine s&rsquo;est imposée comme un acteur de
                   référence de la santé à Kaolack.
                 </p>

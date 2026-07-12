@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { contact } from '@/lib/constants'
 import { formatHours } from '@/lib/utils'
 import AnimatedSection from '@/components/ui/AnimatedSection'
+import AfricanPattern from '@/components/ui/AfricanPattern'
 import type { HoursSlot } from '@/lib/types'
 
 type DayKey = 'weekdays' | 'saturday' | 'sunday'
@@ -50,8 +51,12 @@ export default function Hours() {
   }, [])
 
   return (
-    <section className="py-24 bg-white border-t border-green-primary/10">
-      <div className="mx-auto max-w-4xl px-4">
+    <section className="relative overflow-hidden border-t border-green-primary/10 bg-[#F9F7F4] py-24">
+      <AfricanPattern
+        id="hours"
+        className="pointer-events-none absolute inset-0 h-full w-full text-green-primary opacity-[0.05]"
+      />
+      <div className="relative z-10 mx-auto max-w-4xl px-4">
         <AnimatedSection>
           <div className="mb-10 text-center">
             <h2 className="text-3xl font-bold text-green-dark md:text-4xl">Nos horaires</h2>

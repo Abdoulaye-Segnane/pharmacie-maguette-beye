@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { contact, navLinks, PHARMACY_NAME, PHARMACY_BRAND_NAME, WHATSAPP_NUMBER } from '@/lib/constants'
 import { formatHours, formatPhone, toTelUri } from '@/lib/utils'
 import PharmacyCross from '@/components/ui/PharmacyCross'
+import AfricanPattern from '@/components/ui/AfricanPattern'
 import ChevronRight from '@/components/ui/ChevronRight'
 
 const WHATSAPP_MESSAGE = encodeURIComponent('Bonjour, je souhaite obtenir des informations.')
@@ -16,8 +17,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-green-dark text-white">
-      <div className="mx-auto max-w-6xl px-4 py-16">
+    <footer className="relative overflow-hidden bg-green-dark text-white">
+      {/* Motif africain décoratif — coin gauche */}
+      <AfricanPattern
+        id="footer"
+        className="pointer-events-none absolute left-0 top-0 bottom-0 w-1/4 text-gold opacity-[0.05]"
+      />
+
+      <div className="relative z-10 mx-auto max-w-6xl px-4 py-16">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-5">
 
           {/* Zone 1 (40%) — Marque + coordonnées */}
@@ -125,7 +132,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar — fond légèrement plus sombre */}
-      <div className="bg-black/20">
+      <div className="relative z-10 bg-black/20">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-5 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>© {currentYear} {PHARMACY_NAME}. Tous droits réservés.</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">

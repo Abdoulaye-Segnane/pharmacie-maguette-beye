@@ -1,0 +1,108 @@
+{
+  "gardes": [
+    {
+      "date": "2026-03-20",
+      "type": "Fête musulmane",
+      "label": "Korité (Aïd el-Fitr)",
+      "heures_ouverture": "09:00",
+      "heures_fermeture": "14:00",
+      "note": "Service de garde assuré · date à confirmer"
+    },
+    {
+      "date": "2026-04-04",
+      "type": "Fête nationale",
+      "label": "Fête de l'Indépendance",
+      "heures_ouverture": "09:00",
+      "heures_fermeture": "14:00",
+      "note": "Service de garde assuré"
+    },
+    {
+      "date": "2026-04-05",
+      "type": "Fête chrétienne",
+      "label": "Pâques",
+      "heures_ouverture": "09:00",
+      "heures_fermeture": "14:00",
+      "note": "Service de garde assuré · date à confirmer"
+    },
+    {
+      "date": "2026-05-01",
+      "type": "Fête nationale",
+      "label": "Fête du Travail",
+      "heures_ouverture": "09:00",
+      "heures_fermeture": "14:00",
+      "note": "Service de garde assuré"
+    },
+    {
+      "date": "2026-05-24",
+      "type": "Fête chrétienne",
+      "label": "Pentecôte",
+      "heures_ouverture": "09:00",
+      "heures_fermeture": "14:00",
+      "note": "Service de garde assuré · date à confirmer"
+    },
+    {
+      "date": "2026-05-27",
+      "type": "Fête musulmane",
+      "label": "Tabaski (Aïd el-Adha)",
+      "heures_ouverture": "09:00",
+      "heures_fermeture": "14:00",
+      "note": "Service de garde assuré · date à confirmer"
+    },
+    {
+      "date": "2026-07-18",
+      "type": "Fête musulmane",
+      "label": "Tamkharit (Achoura)",
+      "heures_ouverture": "09:00",
+      "heures_fermeture": "14:00",
+      "note": "Service de garde assuré · date à confirmer"
+    },
+    {
+      "date": "2026-08-15",
+      "type": "Fête chrétienne",
+      "label": "Assomption",
+      "heures_ouverture": "09:00",
+      "heures_fermeture": "14:00",
+      "note": "Service de garde assuré"
+    },
+    {
+      "date": "2026-08-15",
+      "type": "Fête musulmane",
+      "label": "Grand Magal de Touba",
+      "heures_ouverture": "09:00",
+      "heures_fermeture": "14:00",
+      "note": "Service de garde assuré · date à confirmer"
+    },
+    {
+      "date": "2026-09-04",
+      "type": "Fête musulmane",
+      "label": "Gamou (Mawlid an-Nabi)",
+      "heures_ouverture": "09:00",
+      "heures_fermeture": "14:00",
+      "note": "Service de garde assuré · date à confirmer"
+    },
+    {
+      "date": "2026-11-01",
+      "type": "Fête chrétienne",
+      "label": "Toussaint",
+      "heures_ouverture": "09:00",
+      "heures_fermeture": "14:00",
+      "note": "Service de garde assuré"
+    },
+    {
+      "date": "2026-12-25",
+      "type": "Fête chrétienne",
+      "label": "Noël",
+      "heures_ouverture": "09:00",
+      "heures_fermeture": "14:00",
+      "note": "Service de garde assuré"
+    },
+    {
+      "date": "2027-01-01",
+      "type": "Fête nationale",
+      "label": "Nouvel An",
+      "heures_ouverture": "09:00",
+      "heures_fermeture": "14:00",
+      "note": "Service de garde assuré"
+    }
+  ]
+}

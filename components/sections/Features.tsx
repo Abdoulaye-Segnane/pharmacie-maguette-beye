@@ -1,5 +1,6 @@
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import PharmacyCross from '@/components/ui/PharmacyCross'
+import AfricanPattern from '@/components/ui/AfricanPattern'
 import { features } from '@/data/features'
 import type { Feature } from '@/lib/types'
 import type { ReactNode } from 'react'
@@ -27,8 +28,12 @@ const iconMap: Record<Feature['icon'], ReactNode> = {
 
 export default function Features() {
   return (
-    <section className="py-24 bg-white border-t border-green-primary/10">
-      <div className="mx-auto max-w-6xl px-4">
+    <section className="relative overflow-hidden border-t border-green-primary/10 bg-sand/20 py-24">
+      <AfricanPattern
+        id="features"
+        className="pointer-events-none absolute inset-0 h-full w-full text-terra opacity-[0.06]"
+      />
+      <div className="relative z-10 mx-auto max-w-6xl px-4">
         <AnimatedSection className="mb-16 text-center">
           <h2 className="text-3xl font-bold text-green-dark md:text-4xl">
             Pourquoi nous choisir ?

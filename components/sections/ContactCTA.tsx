@@ -9,7 +9,7 @@ const MAPS_SRC = `https://maps.google.com/maps?q=Pharmacie+Maguette+Beye+Kaolack
 
 export default function ContactCTA() {
   return (
-    <section className="py-24 bg-white border-t border-green-primary/10">
+    <section className="py-24 bg-white border-t-4 border-terra">
       <div className="mx-auto max-w-6xl px-4">
         <AnimatedSection className="mb-14 text-center">
           <h2 className="text-3xl font-bold text-green-dark md:text-4xl">Venez nous rendre visite</h2>

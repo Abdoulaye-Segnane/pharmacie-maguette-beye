@@ -6,7 +6,7 @@ export const features: Feature[] = [
     title: 'Médicaments authentiques',
     description: 'Tous nos produits sont sourcés auprès de distributeurs agréés. Qualité et traçabilité garanties.',
     icon: 'shield',
-    stat: 'Distributeurs agréés uniquement',
+    stat: 'Agréé par l\'ARP Sénégal',
   },
   {
     id: '2',
@@ -27,6 +27,6 @@ export const features: Feature[] = [
     title: 'Localisation centrale',
     description: 'Situés au cœur de Kaolack, nous sommes facilement accessibles pour toute la région.',
     icon: 'map-pin',
-    stat: 'Au cœur de Kaolack',
+    stat: 'À 5 min du marché central de Kaolack',
   },
 ]
