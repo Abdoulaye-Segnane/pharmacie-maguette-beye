@@ -35,7 +35,7 @@ function InitialAvatar({ name, index }: { name: string; index: number }): ReactN
 
 function StarRating({ rating }: { rating: number }): ReactNode {
   return (
-    <div className="flex gap-0.5" aria-label={`Note : ${rating} sur 5`}>
+    <div className="flex gap-0.5" role="img" aria-label={`Note : ${rating} sur 5`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <svg
           key={i}

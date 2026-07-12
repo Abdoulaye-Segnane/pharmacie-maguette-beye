@@ -57,8 +57,10 @@ export default function AboutPage() {
           alt="Pharmacien de la Pharmacie Maguette Beye"
           fill
           sizes="100vw"
+          quality={65}
+          loading="eager"
+          fetchPriority="high"
           className="object-cover object-center"
-          priority
         />
         <div
           className="absolute inset-0"

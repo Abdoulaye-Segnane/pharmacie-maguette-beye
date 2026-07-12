@@ -14,6 +14,14 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
     ],
+    formats: ['image/avif', 'image/webp'],
+    qualities: [65, 75],
+    minimumCacheTTL: 2678400,
+  },
+  experimental: {
+    // CSS atomique (Tailwind) inliné dans le <head> → supprime la requête CSS
+    // bloquante au premier rendu (améliore FCP/LCP). Prod uniquement.
+    inlineCss: true,
   },
   async headers() {
     return [
