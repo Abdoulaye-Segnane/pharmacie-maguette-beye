@@ -140,7 +140,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-green-dark">Notre équipe</h2>
             <div className="mx-auto mt-4 h-0.5 w-12 bg-green-primary/50" />
             <p className="mx-auto mt-5 max-w-xl text-gray-dark/70">
-              Des professionnels de santé dévoués, à votre service chaque jour.
+              Des professionnels de santé dévoués, à votre service du lundi au samedi.
             </p>
           </AnimatedSection>
 
