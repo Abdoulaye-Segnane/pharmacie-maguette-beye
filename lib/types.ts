@@ -91,6 +91,11 @@ export interface TeamMember {
   photo: string
 }
 
+export interface FaqItem {
+  question: string
+  answer: string
+}
+
 export interface GardeEntry {
   /** Date ISO au format YYYY-MM-DD. */
   date: string

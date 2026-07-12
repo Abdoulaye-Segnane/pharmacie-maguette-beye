@@ -6,7 +6,9 @@ import Hours from '@/components/sections/Hours'
 import GardesSection from '@/components/sections/GardesSection'
 import Testimonials from '@/components/sections/Testimonials'
 import BlogPreview from '@/components/sections/BlogPreview'
+import Faq from '@/components/sections/Faq'
 import ContactCTA from '@/components/sections/ContactCTA'
+import { faqs } from '@/data/faq'
 
 export const metadata: Metadata = genMeta({
   title: 'Accueil',
@@ -15,15 +17,33 @@ export const metadata: Metadata = genMeta({
   canonical: '/',
 })
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.answer,
+    },
+  })),
+}
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Hero />
       <Features />
       <Hours />
       <GardesSection />
       <Testimonials />
       <BlogPreview />
+      <Faq />
       <ContactCTA />
     </>
   )

@@ -96,11 +96,25 @@ export default async function BlogArticlePage(
     },
   }
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
+      { '@type': 'ListItem', position: 3, name: article.title, item: `${SITE_URL}/blog/${article.slug}` },
+    ],
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <article>
@@ -117,6 +131,15 @@ export default async function BlogArticlePage(
         </div>
 
         <div className="mx-auto max-w-4xl px-4 py-12">
+          <nav aria-label="Fil d'Ariane" className="mb-6 text-sm text-gray-dark/70">
+            <ol className="flex flex-wrap items-center gap-2">
+              <li><Link href="/" className="hover:text-green-primary">Accueil</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link href="/blog" className="hover:text-green-primary">Blog</Link></li>
+              <li aria-hidden="true">/</li>
+              <li className="line-clamp-1 text-gray-dark" aria-current="page">{article.title}</li>
+            </ol>
+          </nav>
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_260px]">
             {/* Article content */}
             <div>

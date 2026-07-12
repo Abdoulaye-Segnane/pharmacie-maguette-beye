@@ -1,0 +1,25 @@
+# Pharmacie Maguette Beye
+
+> Pharmacie de confiance à Kaolack (région du Sine-Saloum, Sénégal). Médicaments authentiques, conseil pharmaceutique personnalisé, parapharmacie et service de garde les jours fériés. Fondée en 2010 par le Dr Mamadou Ndiaye.
+
+La Pharmacie Maguette Beye est située à Dialègne N°4766, derrière le Nouveau Bloc Scientifique du Collège, à Kaolack, à quelques minutes du marché central. Horaires : du lundi au vendredi de 08h00 à 22h00, le samedi de 08h00 à 13h00, fermée le dimanche (hors service de garde). Téléphone : +221 33 942 11 92.
+
+## Pages principales
+
+- [Accueil](https://pharmacie-maguette-beye.vercel.app/): présentation, horaires, prochaines gardes et questions fréquentes.
+- [Catalogue](https://pharmacie-maguette-beye.vercel.app/catalog): médicaments et produits de parapharmacie disponibles.
+- [Blog santé](https://pharmacie-maguette-beye.vercel.app/blog): conseils de santé adaptés au contexte sénégalais.
+- [À propos](https://pharmacie-maguette-beye.vercel.app/a-propos): histoire, équipe et valeurs de la pharmacie.
+- [Contact](https://pharmacie-maguette-beye.vercel.app/contact): téléphone, WhatsApp, adresse et formulaire de contact.
+- [Mentions légales](https://pharmacie-maguette-beye.vercel.app/mentions-legales): éditeur, hébergement et avertissement médical.
+
+## Conseils santé
+
+- [Comment rester hydraté sous la chaleur sénégalaise](https://pharmacie-maguette-beye.vercel.app/blog/hydratation-chaleur-senegal)
+- [Paludisme : prévention et traitements disponibles](https://pharmacie-maguette-beye.vercel.app/blog/paludisme-prevention-traitement)
+- [Les vitamines essentielles pour renforcer votre immunité](https://pharmacie-maguette-beye.vercel.app/blog/vitamines-immunite)
+
+## Notes
+
+- Site vitrine informatif. Les informations de santé publiées ne remplacent en aucun cas une consultation, un diagnostic ou un avis médical professionnel.
+- Contact : +221 33 942 11 92 — Kaolack, Sénégal.
