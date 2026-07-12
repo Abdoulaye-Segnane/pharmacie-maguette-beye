@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import type { ReactNode } from 'react'
 
 interface AnimatedSectionProps {
@@ -21,6 +21,8 @@ const variants = {
   },
 }
 
+// Animation déclenchée au montage (compatible LazyMotion `domAnimation`, qui
+// n'inclut pas la feature `whileInView`/viewport). Le contenu finit toujours visible.
 export default function AnimatedSection({
   children,
   className,
@@ -28,15 +30,14 @@ export default function AnimatedSection({
   delay = 0,
 }: AnimatedSectionProps) {
   return (
-    <motion.div
+    <m.div
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: '-80px' }}
+      animate="visible"
       variants={variants[variant]}
       transition={{ duration: 0.5, ease: 'easeOut', delay }}
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   )
 }

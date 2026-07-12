@@ -41,7 +41,7 @@ export default function TableOfContents({ toc }: TableOfContentsProps) {
 
   return (
     <nav aria-label="Sommaire" className="rounded-xl border border-gray-100 bg-gray-50 p-5">
-      <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-dark/50">
+      <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-dark/70">
         Sommaire
       </p>
       <ol className="space-y-2">

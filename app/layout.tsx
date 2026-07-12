@@ -4,6 +4,7 @@ import { baseMetadata } from '@/lib/seo'
 import { PHARMACY_NAME, SITE_URL, contact } from '@/lib/constants'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import MotionProvider from '@/components/ui/MotionProvider'
 import './globals.css'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -64,9 +65,11 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <MotionProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   )

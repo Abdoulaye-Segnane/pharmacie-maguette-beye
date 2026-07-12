@@ -7,9 +7,9 @@ const testimonials = testimonialsData satisfies Testimonial[]
 
 const AVATAR_COLORS = [
   'bg-green-primary',
-  'bg-gold/90',
-  'bg-teal-600',
   'bg-emerald-700',
+  'bg-teal-700',
+  'bg-green-dark',
 ] as const
 
 function getInitials(name: string): string {
@@ -65,7 +65,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; ind
         <InitialAvatar name={testimonial.name} index={index} />
         <div>
           <div className="text-sm font-semibold text-white">{testimonial.name}</div>
-          <div className="text-xs text-white/55">{testimonial.role}</div>
+          <div className="text-xs text-white/75">{testimonial.role}</div>
         </div>
       </div>
     </div>

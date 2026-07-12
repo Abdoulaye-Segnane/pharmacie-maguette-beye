@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { m, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import type { NavItem } from '@/lib/types'
 
@@ -25,14 +25,14 @@ export default function MobileNav({ isOpen, onClose, links }: MobileNavProps) {
     <AnimatePresence>
       {isOpen && (
         <>
-          <motion.div
+          <m.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/40 z-40"
             onClick={onClose}
           />
-          <motion.nav
+          <m.nav
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
@@ -70,7 +70,7 @@ export default function MobileNav({ isOpen, onClose, links }: MobileNavProps) {
                 </li>
               ))}
             </ul>
-          </motion.nav>
+          </m.nav>
         </>
       )}
     </AnimatePresence>

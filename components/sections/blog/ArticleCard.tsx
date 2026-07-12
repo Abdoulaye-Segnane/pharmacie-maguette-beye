@@ -27,7 +27,7 @@ export default function ArticleCard({ article }: ArticleCardProps) {
       <div className="flex flex-1 flex-col p-5">
         <div className="mb-2 flex items-center gap-2">
           <Badge color="gold">{article.category}</Badge>
-          <time dateTime={article.date} className="text-xs text-gray-dark/50">
+          <time dateTime={article.date} className="text-xs text-gray-dark/70">
             {formatDate(article.date)}
           </time>
         </div>

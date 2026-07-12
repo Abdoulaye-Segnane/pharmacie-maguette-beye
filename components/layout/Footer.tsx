@@ -39,7 +39,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <p className="mt-4 max-w-xs text-sm italic text-white/60">
+            <p className="mt-4 max-w-xs text-sm italic text-white/70">
               Votre pharmacie de confiance au cœur de Kaolack.
             </p>
 
@@ -91,9 +91,9 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               {hoursRows.map(({ label, slot }) => (
                 <li key={label} className="flex items-center justify-between gap-3">
-                  <span className="text-white/60">{label}</span>
+                  <span className="text-white/70">{label}</span>
                   {slot.closed ? (
-                    <span className="font-medium text-red-300/90">Fermé</span>
+                    <span className="font-medium text-red-300">Fermé</span>
                   ) : (
                     <span className="font-medium text-white">{formatHours(slot.open, slot.close)}</span>
                   )}
@@ -133,13 +133,13 @@ export default function Footer() {
 
       {/* Bottom bar — fond légèrement plus sombre */}
       <div className="relative z-10 bg-black/20">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-5 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-5 text-xs text-white/70 sm:flex-row sm:items-center sm:justify-between">
           <p>© {currentYear} {PHARMACY_NAME}. Tous droits réservés.</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <Link href="/mentions-legales" className="transition-colors hover:text-white">
               Mentions légales
             </Link>
-            <span className="text-white/40">Pharmacie agréée — Kaolack, Sénégal</span>
+            <span className="text-white/70">Pharmacie agréée — Kaolack, Sénégal</span>
           </div>
         </div>
       </div>

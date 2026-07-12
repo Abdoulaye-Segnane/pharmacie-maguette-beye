@@ -15,7 +15,7 @@ export default function Hero() {
         alt="Pharmacie Maguette Beye — Kaolack, Sénégal"
         fill
         sizes="100vw"
-        quality={65}
+        quality={55}
         loading="eager"
         fetchPriority="high"
         className="object-cover object-center"

@@ -35,7 +35,7 @@ export default function BlogPreview() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <time dateTime={article.date} className="mb-2 text-xs text-gray-dark/50">
+                  <time dateTime={article.date} className="mb-2 text-xs text-gray-dark/70">
                     {formatDate(article.date)}
                   </time>
                   <h3 className="mb-2 line-clamp-2 font-bold text-green-dark">

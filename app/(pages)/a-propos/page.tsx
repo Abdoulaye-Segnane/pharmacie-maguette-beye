@@ -57,7 +57,7 @@ export default function AboutPage() {
           alt="Pharmacien de la Pharmacie Maguette Beye"
           fill
           sizes="100vw"
-          quality={65}
+          quality={55}
           loading="eager"
           fetchPriority="high"
           className="object-cover object-center"
@@ -160,7 +160,7 @@ export default function AboutPage() {
                     />
                   </div>
                   <div className="font-semibold text-green-dark">{member.name}</div>
-                  <div className="mt-1 text-sm text-gray-dark/60">{member.role}</div>
+                  <div className="mt-1 text-sm text-gray-dark/70">{member.role}</div>
                 </div>
               </AnimatedSection>
             ))}

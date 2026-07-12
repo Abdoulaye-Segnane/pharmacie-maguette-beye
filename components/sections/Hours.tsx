@@ -87,7 +87,7 @@ export default function Hours() {
                 const slot: HoursSlot = contact.hours[key]
                 return (
                   <div key={key} className="p-8 text-center">
-                    <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-dark/50">
+                    <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-dark/70">
                       {label}
                     </div>
                     <div className="text-2xl font-bold text-green-dark">

@@ -123,7 +123,7 @@ export default async function BlogArticlePage(
               {/* Meta */}
               <div className="mb-4 flex items-center gap-3">
                 <Badge color="gold">{article.category}</Badge>
-                <time dateTime={article.date} className="text-sm text-gray-dark/50">
+                <time dateTime={article.date} className="text-sm text-gray-dark/70">
                   {formatDate(article.date)}
                 </time>
               </div>

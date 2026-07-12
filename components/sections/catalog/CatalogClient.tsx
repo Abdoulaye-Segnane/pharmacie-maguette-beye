@@ -57,7 +57,7 @@ export default function CatalogClient({ products, categories }: CatalogClientPro
 
       {/* Grid */}
       {filtered.length === 0 ? (
-        <p className="text-center text-gray-dark/60 py-12">
+        <p className="text-center text-gray-dark/70 py-12">
           Aucun produit ne correspond à votre recherche.
         </p>
       ) : (

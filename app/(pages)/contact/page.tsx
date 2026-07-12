@@ -38,13 +38,13 @@ export default function ContactPage() {
             <h2 className="mb-6 text-xl font-bold text-green-dark">Nos coordonnées</h2>
             <dl className="space-y-5">
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-wider text-gray-dark/50">
+                <dt className="text-xs font-semibold uppercase tracking-wider text-gray-dark/70">
                   Adresse
                 </dt>
                 <dd className="mt-1 text-sm text-gray-dark leading-relaxed">{contact.address}</dd>
               </div>
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-wider text-gray-dark/50">
+                <dt className="text-xs font-semibold uppercase tracking-wider text-gray-dark/70">
                   Téléphone
                 </dt>
                 <dd className="mt-1">
@@ -57,16 +57,16 @@ export default function ContactPage() {
                 </dd>
               </div>
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-wider text-gray-dark/50">
+                <dt className="text-xs font-semibold uppercase tracking-wider text-gray-dark/70">
                   Email
                 </dt>
                 <dd className="mt-1 text-sm text-gray-dark">
                   {contact.email}{' '}
-                  <span className="text-xs text-gray-dark/50">(bientôt disponible)</span>
+                  <span className="text-xs text-gray-dark/70">(bientôt disponible)</span>
                 </dd>
               </div>
               <div>
-                <dt className="text-xs font-semibold uppercase tracking-wider text-gray-dark/50">
+                <dt className="text-xs font-semibold uppercase tracking-wider text-gray-dark/70">
                   Horaires
                 </dt>
                 <dd className="mt-1 space-y-1 text-sm text-gray-dark/80">
@@ -92,7 +92,7 @@ export default function ContactPage() {
               className="border-0"
             />
           </div>
-          <p className="mt-3 text-center text-xs text-gray-dark/50">
+          <p className="mt-3 text-center text-xs text-gray-dark/70">
             Si la carte ne s&apos;affiche pas : {contact.address}
           </p>
         </div>

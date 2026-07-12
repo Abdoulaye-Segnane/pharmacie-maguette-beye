@@ -77,7 +77,7 @@ export default function MentionsLegalesPage() {
               .
               <br />
               Adresse e-mail : {contact.email}{' '}
-              <span className="text-sm text-gray-dark/50">(bientôt disponible)</span>
+              <span className="text-sm text-gray-dark/70">(bientôt disponible)</span>
             </p>
           </div>
 

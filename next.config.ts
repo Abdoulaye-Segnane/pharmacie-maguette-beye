@@ -15,7 +15,10 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'images.unsplash.com' },
     ],
     formats: ['image/avif', 'image/webp'],
-    qualities: [65, 75],
+    // Palier 1366 ajouté (laptops / viewport desktop Lighthouse ~1350px) et max
+    // plafonné à 1920 → le hero pleine largeur n'est plus servi en 2048/3840.
+    deviceSizes: [640, 750, 828, 1080, 1200, 1366, 1600, 1920],
+    qualities: [55, 75],
     minimumCacheTTL: 2678400,
   },
   experimental: {

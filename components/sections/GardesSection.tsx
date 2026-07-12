@@ -32,15 +32,15 @@ export default function GardesSection() {
           {gardes.map((garde, i) => (
             <AnimatedSection key={`${garde.date}-${garde.label}`} delay={i * 0.1}>
               <div className="flex h-full flex-col items-center rounded-2xl border border-gray-100 bg-white p-7 text-center shadow-sm">
-                <div className="text-xs font-semibold uppercase tracking-wider text-accent-warm">
+                <div className="text-xs font-semibold uppercase tracking-wider text-green-primary">
                   {garde.type}
                 </div>
                 <div className="mt-3 text-lg font-bold text-green-dark">{garde.label}</div>
-                <div className="mt-1 text-sm text-gray-dark/60">{formatDate(garde.date)}</div>
+                <div className="mt-1 text-sm text-gray-dark/70">{formatDate(garde.date)}</div>
                 <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-green-primary/10 px-4 py-1.5 text-sm font-semibold text-green-primary">
                   {garde.heures_ouverture} – {garde.heures_fermeture}
                 </div>
-                {garde.note && <p className="mt-4 text-xs text-gray-dark/50">{garde.note}</p>}
+                {garde.note && <p className="mt-4 text-xs text-gray-dark/70">{garde.note}</p>}
               </div>
             </AnimatedSection>
           ))}

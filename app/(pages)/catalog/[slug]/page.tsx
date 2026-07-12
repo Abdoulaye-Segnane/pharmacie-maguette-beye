@@ -66,7 +66,7 @@ export default async function ProductPage(
       <section className="py-16 bg-white min-h-screen">
         <div className="mx-auto max-w-5xl px-4">
           {/* Fil d'Ariane */}
-          <nav aria-label="Fil d'Ariane" className="mb-8 text-sm text-gray-dark/60">
+          <nav aria-label="Fil d'Ariane" className="mb-8 text-sm text-gray-dark/70">
             <ol className="flex items-center gap-2">
               <li><Link href="/" className="hover:text-green-primary">Accueil</Link></li>
               <li aria-hidden="true">/</li>

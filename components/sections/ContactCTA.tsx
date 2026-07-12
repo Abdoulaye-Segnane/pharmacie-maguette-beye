@@ -24,12 +24,12 @@ export default function ContactCTA() {
           <AnimatedSection>
             <div className="space-y-6">
               <div>
-                <h3 className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-dark/50">Adresse</h3>
+                <h3 className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-dark/70">Adresse</h3>
                 <p className="text-gray-dark">{contact.address}</p>
               </div>
 
               <div>
-                <h3 className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-dark/50">Téléphone</h3>
+                <h3 className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-dark/70">Téléphone</h3>
                 <a
                   href={toTelUri(contact.phone)}
                   className="text-lg font-semibold text-green-primary transition-colors hover:text-green-dark"
@@ -39,10 +39,10 @@ export default function ContactCTA() {
               </div>
 
               <div>
-                <h3 className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-dark/50">Email</h3>
+                <h3 className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-dark/70">Email</h3>
                 <p className="text-gray-dark">
                   {contact.email}{' '}
-                  <span className="text-xs text-gray-dark/50">(bientôt disponible)</span>
+                  <span className="text-xs text-gray-dark/70">(bientôt disponible)</span>
                 </p>
               </div>
 
