@@ -35,3 +35,8 @@ export function formatDate(dateStr: string): string {
     year: 'numeric',
   }).format(new Date(dateStr))
 }
+
+/** Formate un montant en FCFA : 18500 → "18 500 FCFA". */
+export function formatPrice(amount: number): string {
+  return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' FCFA'
+}

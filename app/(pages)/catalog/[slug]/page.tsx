@@ -7,6 +7,7 @@ import ProductCard from '@/components/sections/catalog/ProductCard'
 import ProductPlaceholder from '@/components/products/ProductPlaceholder'
 import { generateMetadata as genMeta } from '@/lib/seo'
 import { PHARMACY_NAME, SITE_URL } from '@/lib/constants'
+import { formatPrice } from '@/lib/utils'
 import type { Product } from '@/lib/types'
 import productsData from '@/data/products.json'
 
@@ -49,6 +50,8 @@ export default async function ProductPage(
     brand: { '@type': 'Brand', name: PHARMACY_NAME },
     offers: {
       '@type': 'Offer',
+      price: product.price,
+      priceCurrency: 'XOF',
       availability: product.available
         ? 'https://schema.org/InStock'
         : 'https://schema.org/OutOfStock',
@@ -116,6 +119,9 @@ export default async function ProductPage(
               </div>
               <h1 className="text-3xl font-bold text-green-dark">{product.name}</h1>
               <p className="mt-4 text-gray-dark/80 leading-relaxed">{product.description}</p>
+              <p className="mt-6 text-3xl font-bold text-green-primary tabular-nums">
+                {formatPrice(product.price)}
+              </p>
               <div className="mt-8 rounded-xl bg-green-primary/5 border border-green-primary/20 p-4 text-sm text-gray-dark/70">
                 <strong className="text-green-dark">Conseil de votre pharmacien :</strong>{' '}
                 Pour toute question sur ce produit, n&rsquo;hésitez pas à consulter notre équipe

@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: 'upload.wikimedia.org' },
     ],
     formats: ['image/avif', 'image/webp'],
     // Palier 1366 ajouté (laptops / viewport desktop Lighthouse ~1350px) et max

@@ -91,6 +91,41 @@ export default function MentionsLegalesPage() {
           </div>
 
           <div>
+            <h2 className="mb-3 text-xl font-bold text-green-dark">Crédits images</h2>
+            <p>
+              La plupart des visuels produits proviennent d&rsquo;Unsplash (licence Unsplash,
+              libre d&rsquo;usage). Deux photos issues de Wikimedia Commons sont réutilisées sous
+              licence Creative Commons, images redimensionnées :
+            </p>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              <li>
+                Compresses stériles — «&nbsp;Mullkompresse&nbsp;» par Galilea,{' '}
+                <a
+                  href="https://creativecommons.org/licenses/by-sa/3.0/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-primary transition-colors hover:text-green-dark"
+                >
+                  CC BY-SA 3.0
+                </a>
+                .
+              </li>
+              <li>
+                Pansements adhésifs — «&nbsp;Adhesive bandage&nbsp;» par Jonn Leffmann,{' '}
+                <a
+                  href="https://creativecommons.org/licenses/by/4.0/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-primary transition-colors hover:text-green-dark"
+                >
+                  CC BY 4.0
+                </a>
+                .
+              </li>
+            </ul>
+          </div>
+
+          <div>
             <h2 className="mb-3 text-xl font-bold text-green-dark">Avertissement médical</h2>
             <p>
               Les informations publiées sur ce site sont fournies à titre indicatif et ne remplacent
