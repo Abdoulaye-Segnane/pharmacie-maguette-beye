@@ -81,7 +81,7 @@ export default function AboutPage() {
           <div className="max-w-xl text-white">
             <AnimatedSection variant="fadeIn">
               <span className="inline-flex items-center rounded-full bg-gold/20 px-4 py-1.5 text-sm font-medium text-gold ring-1 ring-gold/30">
-                Depuis 2010
+                Depuis 2008
               </span>
             </AnimatedSection>
             <AnimatedSection variant="slideUp" delay={0.1}>
@@ -90,7 +90,7 @@ export default function AboutPage() {
             <AnimatedSection variant="slideUp" delay={0.2}>
               <p className="mt-6 text-lg text-white/85">
                 Une pharmacie indépendante au service des habitants de Kaolack
-                et de toute la région du Sine-Saloum depuis 2010.
+                et de toute la région du Sine-Saloum depuis 2008.
               </p>
             </AnimatedSection>
           </div>
@@ -117,7 +117,7 @@ export default function AboutPage() {
               <div className="h-0.5 w-10 bg-green-primary/50 mb-6" />
               <div className="space-y-4 text-gray-dark/80 leading-relaxed">
                 <p>
-                  Fondée en 2010 par le Dr Mamadou Ndiaye, pharmacien diplômé de la Faculté de
+                  Fondée en 2008 par le Dr Mamadou Ndiaye, pharmacien diplômé de la Faculté de
                   Médecine de Dakar, notre officine s&rsquo;est imposée comme un acteur de
                   référence de la santé à Kaolack.
                 </p>

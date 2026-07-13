@@ -53,7 +53,7 @@ export default function Hero() {
                 <span className="absolute inline-flex h-full w-full rounded-full bg-gold animate-ping opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-gold" />
               </span>
-              Au cœur de Kaolack depuis 2010
+              Au cœur de Kaolack depuis 2008
             </span>
           </AnimatedSection>
 
