@@ -4,12 +4,13 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Badge from '@/components/ui/Badge'
 import ProductCard from '@/components/sections/catalog/ProductCard'
+import ProductPlaceholder from '@/components/products/ProductPlaceholder'
 import { generateMetadata as genMeta } from '@/lib/seo'
 import { PHARMACY_NAME, SITE_URL } from '@/lib/constants'
 import type { Product } from '@/lib/types'
 import productsData from '@/data/products.json'
 
-const products = productsData satisfies Product[]
+const products: Product[] = productsData
 
 export function generateStaticParams(): { slug: string }[] {
   return products.map((p) => ({ slug: p.slug }))
@@ -44,7 +45,7 @@ export default async function ProductPage(
     '@type': 'Product',
     name: product.name,
     description: product.description,
-    image: product.image,
+    ...(product.image ? { image: product.image } : {}),
     brand: { '@type': 'Brand', name: PHARMACY_NAME },
     offers: {
       '@type': 'Offer',
@@ -93,14 +94,18 @@ export default async function ProductPage(
           {/* Contenu produit */}
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
             <div className="relative h-72 overflow-hidden rounded-2xl bg-gray-50 lg:h-96">
-              <Image
-                src={product.image}
-                alt={product.name}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-                priority
-              />
+              {product.image ? (
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                  priority
+                />
+              ) : (
+                <ProductPlaceholder category={product.category} />
+              )}
             </div>
             <div className="flex flex-col justify-center">
               <div className="mb-3 flex items-center gap-2">

@@ -5,7 +5,7 @@
     "slug": "paracetamol-500mg",
     "category": "Antalgiques",
     "description": "Antidouleur et antipyrétique de référence. Soulage les douleurs légères à modérées et fait baisser la fièvre.",
-    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80",
+    "image": null,
     "available": true
   },
   {
@@ -14,7 +14,7 @@
     "slug": "ibuprofene-400mg",
     "category": "Antalgiques",
     "description": "Anti-inflammatoire non stéroïdien (AINS). Soulage douleurs, inflammation et fièvre.",
-    "image": "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=600&q=80",
+    "image": null,
     "available": true
   },
   {
@@ -23,7 +23,7 @@
     "slug": "vitamine-c-1000mg",
     "category": "Vitamines",
     "description": "Complément vitaminique haute dose. Renforce le système immunitaire et réduit la fatigue.",
-    "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80",
+    "image": null,
     "available": true
   },
   {
@@ -32,7 +32,7 @@
     "slug": "vitamine-d3-2000ui",
     "category": "Vitamines",
     "description": "Essentielle pour la santé osseuse et le système immunitaire. Recommandée lors des périodes de faible ensoleillement.",
-    "image": "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=600&q=80",
+    "image": null,
     "available": true
   },
   {
@@ -41,7 +41,7 @@
     "slug": "creme-hydratante-corps",
     "category": "Dermatologie",
     "description": "Formule riche adaptée aux peaux sèches. Hydrate en profondeur et protège contre la déshydratation cutanée.",
-    "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80",
+    "image": null,
     "available": true
   },
   {
@@ -50,7 +50,7 @@
     "slug": "creme-solaire-spf50",
     "category": "Dermatologie",
     "description": "Protection solaire haute indice. Formule légère, résistante à la transpiration, adaptée au climat tropical.",
-    "image": "https://images.unsplash.com/photo-1526758097130-bab247274f58?w=600&q=80",
+    "image": null,
     "available": false
   },
   {
@@ -59,7 +59,7 @@
     "slug": "sirop-pediatrique-toux",
     "category": "Pédiatrie",
     "description": "Sirop doux pour enfants dès 2 ans. Soulage la toux sèche et irritative. Sans sucre ajouté.",
-    "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80",
+    "image": null,
     "available": true
   },
   {
@@ -68,7 +68,7 @@
     "slug": "vitamine-c-pediatrique",
     "category": "Pédiatrie",
     "description": "Complément vitaminique sous forme de sirop fruité. Renforce les défenses naturelles des enfants dès 3 ans.",
-    "image": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=600&q=80",
+    "image": null,
     "available": true
   }
 ]

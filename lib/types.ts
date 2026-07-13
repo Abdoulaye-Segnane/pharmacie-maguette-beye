@@ -80,7 +80,8 @@ export interface Product {
   slug: string
   category: string
   description: string
-  image: string
+  /** URL de la photo produit, ou null pour afficher le placeholder uniforme. */
+  image: string | null
   available: boolean
 }
 

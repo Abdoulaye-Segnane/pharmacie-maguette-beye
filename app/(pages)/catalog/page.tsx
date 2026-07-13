@@ -18,7 +18,7 @@ export const metadata: Metadata = genMeta({
   canonical: '/catalog',
 })
 
-const products = productsData satisfies Product[]
+const products: Product[] = productsData
 
 export default function CatalogPage() {
   const categories = [...new Set(products.map((p) => p.category))]
