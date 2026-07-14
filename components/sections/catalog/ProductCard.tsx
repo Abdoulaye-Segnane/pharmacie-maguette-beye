@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Badge from '@/components/ui/Badge'
 import ChevronRight from '@/components/ui/ChevronRight'
 import ProductPlaceholder from '@/components/products/ProductPlaceholder'
-import { formatPrice } from '@/lib/utils'
 import type { Product } from '@/lib/types'
 
 interface ProductCardProps {
@@ -41,8 +40,8 @@ export default function ProductCard({ product }: ProductCardProps) {
         <p className="text-sm text-gray-dark/70 line-clamp-2 flex-1">
           {product.description}
         </p>
-        <p className="mt-3 text-lg font-bold text-green-primary tabular-nums">
-          {formatPrice(product.price)}
+        <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-gray-dark/55">
+          Disponible en pharmacie
         </p>
         <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-green-primary">
           Voir le détail

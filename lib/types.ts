@@ -82,7 +82,7 @@ export interface Product {
   description: string
   /** URL de la photo produit, ou null pour afficher le placeholder uniforme. */
   image: string | null
-  /** Prix indicatif en FCFA (franc CFA, XOF). */
+  /** Prix indicatif en FCFA (XOF). Conservé mais MASQUÉ côté public en MVP — réactivable. */
   price: number
   available: boolean
 }
